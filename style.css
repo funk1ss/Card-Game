@@ -73,6 +73,7 @@ memory-card:active {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
 }
 .infoBlock .gameStatusText{
     color: #eaeaf9;
@@ -89,6 +90,31 @@ memory-card:active {
     font-size: 100px;
     text-shadow: 1px 1px 15px orange;
 }
+         
+.infoBlock button {
+    background-image: linear-gradient(to right, #7c1fe7 0%, #9733EE  51%, #7e1992  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    height: 40px;
+    width: 50px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #7c1fe7;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .infoBlock button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+  }
+ 
 @media screen and (max-width: 768px) {
     body{
         font-size: 15px;
@@ -99,6 +125,10 @@ memory-card:active {
     } 
     .container{
         max-width: 360px;
+    }
+    .infoBlock button{
+        height: 20px;
+        width: 30px;
     }
 }
 

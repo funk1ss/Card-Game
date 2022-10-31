@@ -9,8 +9,6 @@ let gameStatus = document.querySelector(".gameStatus")
 let c = 0
 let g = 0
 function flipCard(){
-    
-
     if (lockBoard) return;
     if (this === firstCard) return;
    this.classList.add("flip");
@@ -70,6 +68,28 @@ cards.forEach(card => card.addEventListener("click", flipCard));
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false,false]
     [firstCard,secondCard] = [null,null]
+}
+
+function refresh() {
+    c = 0
+    g = 0 
+    secondCounter.textContent = 0
+    firstCounter.textContent = 0
+    cards.forEach(card => card.addEventListener("click", flipCard));
+    gameStatus.style.display = "none"
+    gameStatus.textContent = "Status"
+    
+    for (let v = 0; v < 12; v++){
+        cards[v].classList.remove("flip");
+
+    }
+    setTimeout( () => {
+        cards.forEach(card => {
+            let randomPos = Math.floor(Math.random() * 12);
+            card.style.order = randomPos;
+        });
+    }, 1500);
+        
 }
 
 (function shuffle() {
