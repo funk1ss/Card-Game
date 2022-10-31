@@ -78,12 +78,13 @@ function refresh() {
     cards.forEach(card => card.addEventListener("click", flipCard));
     gameStatus.style.display = "none"
     gameStatus.textContent = "Status"
-    
+    lockBoard = true
     for (let v = 0; v < 12; v++){
         cards[v].classList.remove("flip");
 
     }
     setTimeout( () => {
+        lockBoard = false
         cards.forEach(card => {
             let randomPos = Math.floor(Math.random() * 12);
             card.style.order = randomPos;
