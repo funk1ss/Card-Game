@@ -88,7 +88,7 @@ function refresh() {
             let randomPos = Math.floor(Math.random() * 12);
             card.style.order = randomPos;
         });
-    }, 1500);
+    }, 500);
         
 }
 
