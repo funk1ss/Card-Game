@@ -7,17 +7,20 @@
 body {
     height: 100vh;
     display: flex;
-    background: url(./img/I3uXM.gif);
+    background: url(./img/wall.png);
     background-size: cover;
     background-repeat:no-repeat ;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Oswald', sans-serif;
+    font-size: 40px;
 
     
 }
 .container{
     display: flex;
     margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
   
 .memory-game {
@@ -66,7 +69,6 @@ memory-card:active {
 }
 .infoBlock{
     color: white;
-    font-size: 60px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -74,11 +76,20 @@ memory-card:active {
 }
 .infoBlock div{
     color: white;
-    font-size: 30px;
     margin: 20px;
 }
 .gameStatus{
     display: none;
-    font-size: 30px;
-    
+}
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 20px;
+    }
+    .memory-game {
+        width: 360px;
+        height: 360px;
+    } 
+    .container{
+        max-width: 360px;
+    }
 }
