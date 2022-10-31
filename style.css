@@ -7,13 +7,23 @@
 body {
     height: 100vh;
     display: flex;
-    background: #060AB2;
+    background: url(./img/I3uXM.gif);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+
+    
+}
+.container{
+    display: flex;
+    margin: auto;
 }
   
 .memory-game {
     width: 640px;
     height: 640px;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
@@ -29,6 +39,7 @@ body {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+    box-shadow: 0px 0px 5px 1px orange;
 }
 
 memory-card:active {
@@ -43,12 +54,31 @@ memory-card:active {
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: #1C7CCC;
+    background: url(./img/blue-card.png);
     backface-visibility: hidden;
+    opacity: 0.9;
 }
 .memory-card.flip{
     transform: rotateY(180deg);
 }
 .front-face{
     transform: rotateY(180deg);
+}
+.infoBlock{
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.infoBlock div{
+    color: white;
+    font-size: 30px;
+    margin: 20px;
+}
+.gameStatus{
+    display: none;
+    font-size: 30px;
+    
 }

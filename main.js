@@ -3,8 +3,11 @@ const cards = document.querySelectorAll(".memory-card")
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
-
-
+let firstCounter = document.querySelector(".firstCounter")
+let secondCounter = document.querySelector(".secondCounter")
+let gameStatus = document.querySelector(".gameStatus")
+let c = 0
+let g = 0
 function flipCard(){
     
 
@@ -29,7 +32,18 @@ function checkForMatch(){
     if (firstCard.dataset.framework === secondCard.dataset.framework){
         console.log("2")
         disableCards();
+        c++
+        secondCounter.textContent = c
+        if (c == 6){
+            gameStatus.textContent = "You Win"
+            gameStatus.style.display = "block"
+        }
         return
+    }
+    else {
+        g++
+        firstCounter.textContent = g
+
     }
 
     unflipCards();
