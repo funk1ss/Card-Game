@@ -35,7 +35,7 @@ function checkForMatch(){
         c++
         secondCounter.textContent = c
         if (c == 6){
-            gameStatus.textContent = "You Win"
+            gameStatus.textContent = "You Won!"
             gameStatus.style.display = "block"
         }
         return

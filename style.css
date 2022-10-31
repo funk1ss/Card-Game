@@ -74,10 +74,9 @@ memory-card:active {
     flex-direction: column;
     align-items: center;
 }
-.infoBlock div{
+.infoBlock .gameStatusText{
     color: #eaeaf9;
-    overflow: hidden;
-    border-right: .17em solid #e29508;  
+    overflow: hidden;  
     white-space: nowrap;  
     margin: 0 auto;  
     letter-spacing: .17em;
@@ -87,6 +86,8 @@ memory-card:active {
 }
 .gameStatus{
     display: none;
+    font-size: 100px;
+    text-shadow: 1px 1px 15px orange;
 }
 @media screen and (max-width: 768px) {
     body{
